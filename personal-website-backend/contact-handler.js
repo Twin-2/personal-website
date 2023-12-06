@@ -51,7 +51,7 @@ async function sendMail(subject, data, replyTo) {
         },
       },
     },
-    FromEmailAddress: "contact@andys-codex.com",
+    FromEmailAddress: "contact@devdwhitmore.com",
     ReplyToAddresses: [replyTo],
   };
 

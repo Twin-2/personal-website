@@ -1,4 +1,4 @@
-org: andywgarcia
+org: davidwhitmore
 app: personal-website-backend
 service: personal-website-backend
 frameworkVersion: "3"
@@ -11,7 +11,7 @@ provider:
     cors:
       allowedOrigins:
         - http://localhost:5173
-        - https://andys-codex.com
+        - https://devdwhitmore.com
       allowedMethods:
         - OPTIONS
         - POST
