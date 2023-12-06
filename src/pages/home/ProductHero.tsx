@@ -57,7 +57,7 @@ export default function ProductHero(props: BoxProps) {
               textTransform="none"
               letterSpacing={0}
             >
-              Strategic software engineer and proven leader,
+              Result-driven software engineer and passionat leader,
             </Typography>
             <Typography
               color="inherit"
@@ -67,7 +67,7 @@ export default function ProductHero(props: BoxProps) {
               textTransform="none"
               letterSpacing={0}
             >
-              driving innovation and achieving team success
+              delivering client-centric solutions and improving team performance
             </Typography>
           </Box>
           <Box

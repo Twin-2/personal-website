@@ -69,7 +69,6 @@ export default function RequestResumeDialog(props: ContactFormProps) {
       onSubmit(true);
     }
   };
-
   const isValidForm =
     !!recaptchaResponse &&
     phoneNumber &&

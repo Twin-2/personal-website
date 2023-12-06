@@ -13,6 +13,11 @@ export const projects: Project[] = [
     width: "40%",
     linkUrl: "https://my.prescryptive.com",
   },
+  {
+    title: "Farming Game Helper",
+    width:'40%',
+    linkUrl: 'https://farming-game-helper.netlify.app/'
+  }
 ];
 
 export default projects;

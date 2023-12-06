@@ -2,7 +2,7 @@ const { isValidRecaptcha } = require("./verify-recaptcha");
 const { SESv2Client, SendEmailCommand } = require("@aws-sdk/client-sesv2");
 const fs = require("node:fs");
 
-const SOURCE_EMAIL = "no-reply@devdwhitmore.com";
+const SOURCE_EMAIL = "no-reply@davidthedev.com";
 const SUBJECT = "Your Request for David's Resume";
 
 module.exports.handler = async (event) => {
@@ -56,7 +56,7 @@ async function sendResume(fullName, email, phoneNumber, company, message) {
         ),
       },
     },
-    FromEmailAddress: "no-reply@devdwhitmore.com",
+    FromEmailAddress: "no-reply@davidthedev.com",
   };
 
   try {

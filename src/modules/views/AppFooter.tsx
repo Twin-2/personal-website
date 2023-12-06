@@ -93,7 +93,7 @@ export default function AppFooter(props: TypographyProps) {
         <Box sx={{ my: 8, display: "flex", flexWrap: "wrap", gap: 4 }}>
           <Box
             component="img"
-            src="/static/david-headshot.jpeg"
+            src="/static/headshot.jpg"
             alt="David Whitmore"
             maxHeight="465px"
             sx={{ display: { xs: "none", md: "block" } }}
