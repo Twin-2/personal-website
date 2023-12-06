@@ -141,8 +141,8 @@ function GetInTouchSection(props: BoxProps) {
           /> */}
           <Box
             component="img"
-            src="/static/andy-headshot.jpeg"
-            alt="Andy Garcia"
+            src="/static/david-headshot.jpeg"
+            alt="David Whitmore"
             sx={{
               position: "absolute",
               top: -28,

@@ -2,8 +2,8 @@ const { isValidRecaptcha } = require("./verify-recaptcha");
 const { SESv2Client, SendEmailCommand } = require("@aws-sdk/client-sesv2");
 const fs = require("node:fs");
 
-const SOURCE_EMAIL = "no-reply@andys-codex.com";
-const SUBJECT = "Your Request for Andy's Resume";
+const SOURCE_EMAIL = "no-reply@davidthedev.com";
+const SUBJECT = "Your Request for David's Resume";
 
 module.exports.handler = async (event) => {
   const body = JSON.parse(event.body);
@@ -56,7 +56,7 @@ async function sendResume(fullName, email, phoneNumber, company, message) {
         ),
       },
     },
-    FromEmailAddress: "no-reply@andys-codex.com",
+    FromEmailAddress: "no-reply@davidthedev.com",
   };
 
   try {
@@ -101,7 +101,7 @@ function buildRawEmailContent(fullName, email, phoneNumber, company, message) {
       <br />
       <p>I am looking forward to connecting with you!</p>
       <br />
-      <p>Andy Garcia</p>
+      <p>David Whitmore</p>
       <hr />
       <br />
       <p>Your Submission:</p>
@@ -119,7 +119,7 @@ function buildRawEmailContent(fullName, email, phoneNumber, company, message) {
   rawContent += "\n\n";
   rawContent += "--NextPart\n";
   rawContent +=
-    'Content-Type: application/octet-stream; name="resume-andy-garcia.pdf"\n';
+    'Content-Type: application/octet-stream; name="resume-david-whitmore.pdf"\n';
   rawContent += "Content-Transfer-Encoding: base64\n";
   rawContent += "Content-Disposition: attachment\n\n";
   rawContent +=

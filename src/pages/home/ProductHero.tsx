@@ -46,7 +46,7 @@ export default function ProductHero(props: BoxProps) {
             textTransform="none"
             fontWeight="700"
           >
-            Andy Garcia
+            David Whitmore
           </Typography>
           <Box className="transitioned-content">
             <Typography
@@ -57,7 +57,7 @@ export default function ProductHero(props: BoxProps) {
               textTransform="none"
               letterSpacing={0}
             >
-              Strategic software engineer and proven leader,
+              Result-driven software engineer and passionat leader,
             </Typography>
             <Typography
               color="inherit"
@@ -67,7 +67,7 @@ export default function ProductHero(props: BoxProps) {
               textTransform="none"
               letterSpacing={0}
             >
-              driving innovation and achieving team success
+              delivering client-centric solutions and improving team performance
             </Typography>
           </Box>
           <Box
@@ -79,7 +79,7 @@ export default function ProductHero(props: BoxProps) {
             <IconButton
               aria-label="GitHub"
               component={Link}
-              href="https://github.com/andywgarcia"
+              href="https://github.com/Twin-2"
               target="_blank"
               sx={(theme) => ({ color: theme.palette.common.white })}
               size="large"
@@ -89,7 +89,7 @@ export default function ProductHero(props: BoxProps) {
             <IconButton
               aria-label="LinkedIn"
               component={Link}
-              href="https://www.linkedin.com/in/andywgarcia/"
+              href="https://www.linkedin.com/in/david-whitmore/"
               target="_blank"
               sx={(theme) => ({ color: theme.palette.common.white })}
               size="large"

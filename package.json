@@ -4,12 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "bunx --bun vite",
-    "build": "bunx --bun vite build",
+    "dev": "vite",
+    "build": "vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "bunx --bun vite preview",
-    "deploy": "bun run build && bunx serverless deploy && bunx serverless syncToS3 && bun run invalidate-distribution",
-    "invalidate-distribution": "aws cloudfront create-invalidation --distribution-id E39GRZ6ZQTWUTN --paths \"/index.html\""
+    "preview": "vite preview",
+    "deploy": "npm run build && serverless deploy && serverless syncToS3 && npm run invalidate-distribution",
+    "invalidate-distribution": "aws cloudfront create-invalidation --distribution-id E3P9OX1JIZQK8J --paths \"/index.html\""
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",

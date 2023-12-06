@@ -14,17 +14,10 @@ const featuredProjects = [
     imageUrl: "/static/myprescryptive.png",
   },
   {
-    title: "Wisedoc",
-    description:
-      "Automagically formats your documents into the format you need.",
-    imageUrl: "/static/wisedoc.png",
-  },
-  {
-    title: "Marshmallow",
-    description:
-      "Calculates the true cost (opportunity cost) of your desires while you are in debt.",
-    imageUrl: "/static/marshmallow.png",
-  },
+    title: "Farming Game Helper",
+    description: "Compantion app for the Farming Game board game. Handles tracking of resources and calculations for harvesting.",
+    imageUrl: "/static/farming-game-helper.png"
+  }
 ];
 
 const FeaturedProjectGrid = styled(Box)(({ theme }) => ({

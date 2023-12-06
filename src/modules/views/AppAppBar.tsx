@@ -62,7 +62,7 @@ function AppAppBar() {
               // @ts-ignore
               component={pathname === "/" ? "a" : undefined}
             >
-              {"Andy Garcia"}
+              {"David Whitmore"}
             </Link>
           </Box>
           <Box display="flex" gap={2} alignItems="center">
