@@ -12,11 +12,13 @@ const featuredProjects = [
     description:
       "Allows patients to view the prices of their prescriptions at pharmaacies near them.",
     imageUrl: "/static/myprescryptive.png",
+    linkUrl: "https://myprescryptive.com/"
   },
   {
     title: "Farming Game Helper",
     description: "Compantion app for the Farming Game board game. Handles tracking of resources and calculations for harvesting.",
-    imageUrl: "/static/farming-game-helper.png"
+    imageUrl: "/static/farming-game-helper.png",
+    linkUrl: "https://farming-game-helper.netlify.app/"
   }
 ];
 
@@ -85,8 +87,8 @@ export default function FeaturedProjects() {
               </Typography>
               <Typography>{project.description}</Typography>
             </ProjectTextContainer>
-            <Box flex={1}>
-              <img src={project.imageUrl} width="100% " />
+            <Box flex={1} >
+              <Button onClick={()=> onButtonClick(project)}><img src={project.imageUrl} width="100% " /></Button>
             </Box>
           </Box>
         ))}
