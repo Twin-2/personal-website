@@ -8,6 +8,8 @@ import RequestResumeDialog from "../components/RequestResumeDialog";
 import Snackbar from "../components/Snackbar";
 import Button from "@mui/material/Button";
 import { useLocation } from "react-router-dom";
+import { IconButton, Menu, MenuItem } from "@mui/material";
+import ListIcon from '@mui/icons-material/List';
 
 const SNACKBAR_SUCCESS_MESSAGE =
   "My email will be automatically emailed to you very soon. Thank you!";
@@ -18,6 +20,16 @@ function AppAppBar() {
   const [snackbarMessage, setSnackbarMessage] = useState(
     SNACKBAR_SUCCESS_MESSAGE,
   );
+  const [width, setWidth] = useState(window.innerWidth);
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+
+  const open = Boolean(anchorEl);
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   const onContactFormSubmit = (didError: boolean) => {
     if (didError) {
@@ -35,6 +47,14 @@ function AppAppBar() {
     e.stopPropagation();
     setIsDialogOpen(true);
   };
+
+  useEffect(()=> {
+    const handleResizeWindow = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResizeWindow);
+    return () => {
+      window.removeEventListener("resize", handleResizeWindow);
+    };
+  }, [])
 
   const appBarRef = useRef<HTMLDivElement>();
   useEffect(() => {
@@ -65,7 +85,37 @@ function AppAppBar() {
               {"David Whitmore"}
             </Link>
           </Box>
-          <Box display="flex" gap={2} alignItems="center">
+          {width<600 ?
+          (<><IconButton onClick={handleClick}>
+              <ListIcon />
+            </IconButton>
+            <Menu
+              id="long-menu"
+              MenuListProps={{
+                'aria-labelledby': 'long-button',
+              }}
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+            >
+                <MenuItem key={'projects'} onClick={handleClose}>
+                  <Button component="a" href="/#featured-projects">
+                    Projects
+                  </Button>
+                </MenuItem>
+                <MenuItem key={'contact'} onClick={handleClose}>
+                  <Button component="a" href="/#contact">
+                    Contact
+                  </Button>
+                </MenuItem>
+                <MenuItem key={'resume'} onClick={handleClose}>
+                  <Button component="a" onClick={onRequestResumeClick}>
+                    Resume
+                  </Button>
+                </MenuItem>
+              </Menu></>)
+          :
+          (<Box display="flex" gap={2} alignItems="center" >
             <Button component="a" href="/#featured-projects">
               Projects
             </Button>
@@ -75,7 +125,7 @@ function AppAppBar() {
             <Button component="a" onClick={onRequestResumeClick}>
               Resume
             </Button>
-          </Box>
+          </Box>)}
         </Toolbar>
       </AppBar>
       <Toolbar />

@@ -10,13 +10,13 @@ const featuredProjects = [
   {
     title: "myPrescryptive",
     description:
-      "Allows patients to view the prices of their prescriptions at pharmaacies near them.",
+      "Allows patients to view the prices of their prescriptions at pharmacies near them.",
     imageUrl: "/static/myprescryptive.png",
     linkUrl: "https://myprescryptive.com/"
   },
   {
     title: "Farming Game Helper",
-    description: "Compantion app for the Farming Game board game. Handles tracking of resources and calculations for harvesting.",
+    description: "Companion app for the Farming Game board game. Handles tracking of resources and calculations for harvesting.",
     imageUrl: "/static/farming-game-helper.png",
     linkUrl: "https://farming-game-helper.netlify.app/"
   }
